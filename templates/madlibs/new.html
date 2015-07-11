@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create a MadLib!</title>
+  <link rel="stylesheet" href="/public/style.css">
+  <link href='http://fonts.googleapis.com/css?family=Dosis:300' rel='stylesheet' type='text/css'>
+</head>
+<body class = "new">
+  <h2>Create a MadLib!</h2>
+  <section>
+    <form action="/movies/new" method ="post">
+      <table class ="newTable">
+        <tr>
+          <th>
+            <label for="title">Title</label>
+          </th>
+        <td>
+          <input id= "title" type="text" name="title" value = ''>
+        </td>
+        </tr>
+        <tr>
+          <th>
+            <label for="director">Director</label>
+          </th>
+        <td>
+          <input id= "director" type="text" name="director" value = ''>
+        </td>
+        </tr>
+        <tr>
+          <th>
+            <label for="year">Year</label>
+          </th>
+        <td>
+          <input id= "year" type="text" name="year" value = ''>
+        </td>
+        </tr>
+        <tr>
+          <th>
+            <label for="url">URL</label>
+          </th>
+        <td>
+          <input id= "url" type="text" name="url" value = ''>
+        </td>
+        </tr>
+    </table>
+      <input class = "button" type="submit" value="Create MadLib">
+    </form>
+  <a href="/"><button class="button">Go To All MadLibs</button></a>
+  </section>
+</body>
+</html>
