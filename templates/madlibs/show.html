@@ -4,7 +4,16 @@
   <meta charset="UTF-8">
   <title>See Your MadLib!</title>
 </head>
-<body>
-show
+
+<section>
+ {{#madlib}}
+ <body>
+   <p>On a Sunday afternoon, {{properNoun}} was ready to go for a {{adjective1}} hike. {{properNoun}} found their backpack, and started loading up with a water bottle {{noun1}}, sunscreen, {{noun2}} and insect repellent.
+ <br>
+   {{properNoun}} arrived at the trailhead, and was dismayed to find a {{adjective2}} {{noun3}} blocking the trail. {{properNoun}} decided that it was time to give up and go home for a {{adjective3}} beer.</p>
+   {{/madlib}}
+  <a href ="/madlibs/{{_id}}/edit"><button class="button">Edit</button></a>
+ <a href="/"><button class="button">Go To All MadLibs</button></a>
+
 </body>
 </html>

@@ -2,21 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Create a MadLib!</title>
+  <title>Edit Your MadLib!</title>
   <link rel="stylesheet" href="/public/style.css">
   <link href='http://fonts.googleapis.com/css?family=Dosis:300' rel='stylesheet' type='text/css'>
 </head>
 <body class = "new">
-  <h2>Create a MadLib!</h2>
+  <h2>Edit Your MadLib!</h2>
   <section>
-    <form action="/madlibs/new" method ="post">
+  {{#madlib}}
+    <form action="/madlibs/{{_id}}/update" method ="post">
       <table class ="newTable">
         <tr>
           <th>
             <label for="properNoun">Proper Noun</label>
           </th>
         <td>
-          <input id= "properNoun" type="text" name="properNoun" value = ''>
+          <input id= "properNoun" type="text" name="properNoun" value = "{{properNoun}}">
         </td>
         </tr>
         <tr>
@@ -24,7 +25,7 @@
             <label for="adjective1">Adjective</label>
           </th>
         <td>
-          <input id= "adjective1" type="text" name="adjective1" value = ''>
+          <input id= "adjective1" type="text" name="adjective1" value = '{{adjective1}}'>
         </td>
         </tr>
         <tr>
@@ -32,7 +33,7 @@
             <label for="noun">Noun</label>
           </th>
         <td>
-          <input id= "noun1" type="text" name="noun1" value = ''>
+          <input id= "noun1" type="text" name="noun1" value = '{{noun1}}'>
         </td>
         </tr>
         <tr>
@@ -40,7 +41,7 @@
             <label for="noun2">Another Noun</label>
           </th>
         <td>
-          <input id= "noun2" type="text" name="noun2" value = ''>
+          <input id= "noun2" type="text" name="noun2" value = '{{noun2}}'>
         </td>
         </tr>
         <tr>
@@ -48,7 +49,7 @@
             <label for="adjective2">Another Adjective</label>
           </th>
         <td>
-          <input id= "adjective2" type="text" name="adjective2" value = ''>
+          <input id= "adjective2" type="text" name="adjective2" value = '{{adjective2}}'>
         </td>
         </tr>
         <tr>
@@ -56,7 +57,7 @@
             <label for="noun3">Final Noun</label>
           </th>
         <td>
-          <input id= "noun3" type="text" name="noun3" value = ''>
+          <input id= "noun3" type="text" name="noun3" value = '{{noun3}}'>
         </td>
         </tr>
         <tr>
@@ -64,10 +65,11 @@
             <label for="adjective3">Final Adjective</label>
           </th>
         <td>
-          <input id= "adjective3" type="text" name="adjective3" value = ''>
+          <input id= "adjective3" type="text" name="adjective3" value = '{{adjective3}}'>
         </td>
         </tr>
     </table>
+    {{/madlib}}
       <input class = "button" type="submit" value="Update MadLib">
     </form>
   <a href="/"><button class="button">Go To All MadLibs</button></a>

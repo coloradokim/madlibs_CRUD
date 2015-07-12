@@ -2,9 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>All Movies</title>
+  <link rel="stylesheet" href="/public/style.css">
 </head>
-<body>
-  index
+  <body class ="index">
+    <header>
+      <nav>
+        <h2>All Your MadLibs!</h2>
+        <a href="/madlibs/new"><button id ="newButton" class="button">Add a MadLib</button></a>
+      </nav>
+    </header>
+    {{#madlib}}
+  <h2>MadLibs</h2>
+    <p>On a Sunday afternoon, {{properNoun}} was ready to go for a {{adjective1}} hike. {{properNoun}} found their backpack, and started loading up with a water bottle {{noun1}}, sunscreen, {{noun2}} and insect repellent.
+  <br>
+    {{properNoun}} arrived at the trailhead, and was dismayed to find a {{adjective2}} {{noun3}} blocking the trail. {{properNoun}} decided that it was time to give up and go home for a {{adjective3}} beer.</p>
+        <form action="/madlibs/{{_id}}/delete" method="POST">
+           <input type="submit" value="Delete MadLib" class="button">
+        </form>
+        <a href ="/madlibs/{{_id}}/edit"><button class ="button">Edit MadLib</button</a>
+      {{/madlib}}
 </body>
 </html>
